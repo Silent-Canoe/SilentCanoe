@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://silent-canoe.github.io/SilentCanoe/sitemap.xml
