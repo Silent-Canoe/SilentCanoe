@@ -13,28 +13,14 @@ document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', 
     navMenu.classList.remove('active');
 }));
 
-// SUPER SIMPLE scroll - just scroll to the About section with massive offset
-document.querySelectorAll('a[href="#about"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const aboutSection = document.getElementById('about');
-        if (aboutSection) {
-            // Scroll to the absolute top of the About section
-            window.scrollTo({
-                top: aboutSection.offsetTop,
-                behavior: 'smooth'
-            });
-        }
-    });
-});
-
-// Handle other navigation links normally
-document.querySelectorAll('a[href^="#"]:not([href="#about"])').forEach(anchor => {
+// Clean smooth scrolling for all navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const targetId = this.getAttribute('href').substring(1);
         const target = document.getElementById(targetId);
         if (target) {
+            // Smooth scroll to section with proper navbar clearance
             target.scrollIntoView({
                 behavior: 'smooth',
                 block: 'start'
