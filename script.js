@@ -13,30 +13,32 @@ document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', 
     navMenu.classList.remove('active');
 }));
 
-// Smooth scrolling for navigation links - very simple approach
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+// SUPER SIMPLE scroll - just scroll to the About section with massive offset
+document.querySelectorAll('a[href="#about"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const aboutSection = document.getElementById('about');
+        if (aboutSection) {
+            // Scroll to the absolute top of the About section
+            window.scrollTo({
+                top: aboutSection.offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
+// Handle other navigation links normally
+document.querySelectorAll('a[href^="#"]:not([href="#about"])').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const targetId = this.getAttribute('href').substring(1);
-        
-        if (targetId === 'about') {
-            // Special handling for About section - scroll to very top of section
-            const aboutSection = document.getElementById('about');
-            if (aboutSection) {
-                window.scrollTo({
-                    top: aboutSection.offsetTop - 100, // Simple 100px offset
-                    behavior: 'smooth'
-                });
-            }
-        } else {
-            // For other sections, use standard approach
-            const target = document.getElementById(targetId);
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
+        const target = document.getElementById(targetId);
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
         }
     });
 });

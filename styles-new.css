@@ -54,12 +54,19 @@ html {
     scroll-padding-top: 200px; /* Much more generous padding for fixed navbar */
 }
 
-/* Navbar spacer to ensure content is always below navbar */
-.navbar-spacer {
-    height: 250px; /* Much larger height to guarantee visibility */
+/* MEGA spacer - absolutely cannot be missed */
+.mega-spacer {
+    height: 400px; /* HUGE height - impossible to miss */
     width: 100%;
     display: block;
-    background: rgba(255, 0, 0, 0.1); /* Temporary red background to see if it's working */
+    background: rgba(0, 255, 0, 0.3); /* Bright green background */
+    border: 5px solid red; /* Red border for maximum visibility */
+    content: "SPACER AREA";
+}
+
+/* Remove the old spacer */
+.navbar-spacer {
+    display: none;
 }
 
 /* Specific sections that need extra top padding */
