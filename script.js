@@ -13,20 +13,20 @@ document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', 
     navMenu.classList.remove('active');
 }));
 
-// Smooth scrolling for navigation links with proper offset
+// Smooth scrolling for navigation links - target the spacer element
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const targetId = this.getAttribute('href').substring(1);
         const target = document.getElementById(targetId);
         if (target) {
-            // Use a much larger offset to guarantee section titles are visible
-            const yOffset = -200; 
-            const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            // Look for spacer div first, then fall back to section
+            const spacer = target.querySelector('.navbar-spacer');
+            const scrollTarget = spacer || target;
             
-            window.scrollTo({
-                top: Math.max(0, y), // Don't scroll above page top
-                behavior: 'smooth'
+            scrollTarget.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
             });
         }
     });

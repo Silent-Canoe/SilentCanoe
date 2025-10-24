@@ -54,9 +54,16 @@ html {
     scroll-padding-top: 200px; /* Much more generous padding for fixed navbar */
 }
 
+/* Navbar spacer to ensure content is always below navbar */
+.navbar-spacer {
+    height: 120px; /* Fixed height to push content down */
+    width: 100%;
+    display: block;
+}
+
 /* Specific sections that need extra top padding */
 #about, #projects, #contact {
-    padding-top: 15rem; /* Massive padding to ensure titles are visible */
+    padding-top: 0; /* Reset padding since we're using spacer div */
     scroll-margin-top: 200px; /* Very generous scroll margin */
 }
 
