@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Silent-Canoe - Open Source Development & Freelance Services</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Silent-Canoe - Open Source Learning & Community Building</title>
+    <link rel="stylesheet" href="styles-new.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="canonical" href="https://silent-canoe.github.io/SilentCanoe/">
+    <meta name="description" content="Open source projects for learning, sharing, and building together. No profit, just passion for code and community.">
 </head>
 <body>
     <!-- Navigation -->
@@ -19,7 +21,6 @@
                 <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
                 <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
-                <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
                 <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <div class="hamburger">
@@ -34,27 +35,58 @@
     <section id="home" class="hero">
         <div class="hero-container">
             <div class="hero-content">
-                <h1 class="hero-title">Professional Development & <span class="highlight">Open Source</span></h1>
+                <div class="hero-badge">
+                    <i class="fab fa-osi"></i>
+                    <span>Open Source Advocate</span>
+                </div>
+                <h1 class="hero-title">Learning. Building. <span class="highlight">Sharing.</span></h1>
                 <p class="hero-description">
-                    Silent-Canoe specializes in creating innovative, community-driven solutions that solve real-world problems. 
-                    We excel in Python development, GUI applications, and advanced file processing systems.
+                    Welcome to my open source journey! I'm learning to code, building useful tools, 
+                    and sharing everything freely. No profit motives - just passion for code and community.
                 </p>
                 <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">View Projects</a>
-                    <a href="#contact" class="btn btn-secondary">Hire Me</a>
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fab fa-github"></i>
+                        View Projects
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i>
+                        Get in Touch
+                    </a>
                 </div>
                 <div class="hero-stats">
                     <div class="stat">
-                        <h3>1+</h3>
-                        <p>Open Source Projects</p>
+                        <h3><i class="fas fa-code"></i></h3>
+                        <p>Learning to Code</p>
                     </div>
                     <div class="stat">
-                        <h3>100%</h3>
-                        <p>Community Focused</p>
+                        <h3><i class="fab fa-osi"></i></h3>
+                        <p>Open Source</p>
                     </div>
                     <div class="stat">
-                        <h3>∞</h3>
-                        <p>Learning & Growing</p>
+                        <h3><i class="fas fa-share"></i></h3>
+                        <p>Free to Use</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-animation">
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-title">open_source_spirit.py</span>
+                        <div class="code-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="code-content">
+                        <span class="comment"># The open source way</span><br>
+                        <span class="keyword">def</span> <span class="function">build_together</span>():<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"learn"</span>: <span class="boolean">True</span>,<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"share"</span>: <span class="boolean">True</span>,<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"profit"</span>: <span class="boolean">False</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;}
                     </div>
                 </div>
             </div>
@@ -67,26 +99,27 @@
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>
-                        Silent-Canoe is a professional development company dedicated to creating open-source solutions that benefit the entire community. 
-                        Our journey began with a vision to build tools that are not only functional but also accessible to everyone.
-                    </p>
-                    <p>
-                        We specialize in Python development, creating desktop applications with intuitive GUIs, and building 
-                        robust file processing systems. Every project we undertake follows professional standards with 
-                        comprehensive documentation and thorough testing.
-                    </p>
+                    <div class="journey-intro">
+                        <h3>My Open Source Journey</h3>
+                        <p>
+                            I'm passionate about learning to code and building useful tools that anyone can use for free. 
+                            I believe technology should be accessible to everyone, so I share all my projects under open source licenses.
+                        </p>
+                        <p>
+                            This isn't about making money - it's about learning, growing, and giving back to the community 
+                            that has taught me so much.
+                        </p>
+                    </div>
+                    
                     <div class="skills">
-                        <h3>Technical Skills</h3>
+                        <h3>What I'm Learning</h3>
                         <div class="skill-tags">
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">Tkinter</span>
+                            <span class="skill-tag">Python <i class="fab fa-python"></i></span>
+                            <span class="skill-tag">JavaScript <i class="fab fa-js"></i></span>
+                            <span class="skill-tag">HTML/CSS <i class="fab fa-html5"></i></span>
+                            <span class="skill-tag">Git/GitHub <i class="fab fa-git-alt"></i></span>
                             <span class="skill-tag">GUI Development</span>
                             <span class="skill-tag">File Processing</span>
-                            <span class="skill-tag">Open Source</span>
-                            <span class="skill-tag">Git/GitHub</span>
-                            <span class="skill-tag">Documentation</span>
-                            <span class="skill-tag">Testing</span>
                         </div>
                     </div>
                 </div>
@@ -97,130 +130,49 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
+            <h2 class="section-title">My Projects</h2>
+            <p class="section-subtitle">Free tools I've built for everyone to use</p>
             <div class="projects-grid">
                 
                 <!-- FileForge Project -->
                 <div class="project-card featured">
                     <div class="project-header">
                         <h3>SilentCanoe-FileForge</h3>
-                        <span class="project-badge">Featured</span>
+                        <div class="project-badges">
+                            <span class="project-badge featured">Available Now</span>
+                            <span class="project-badge license">MIT License</span>
+                        </div>
                     </div>
                     <p class="project-description">
-                        A comprehensive file conversion suite with professional GUI, supporting images, documents, 
-                        audio, and video formats. Features batch processing, real-time progress tracking, and 
-                        6-checkpoint validation system.
+                        A file conversion tool with a simple GUI. Converts images, documents, audio, and video files. 
+                        Completely free to download and use.
                     </p>
                     <div class="project-features">
-                        <span class="feature">🖼️ Advanced Image Processing</span>
+                        <span class="feature">🖼️ Image Processing</span>
                         <span class="feature">📄 Document Conversion</span>
                         <span class="feature">🎵 Audio Processing</span>
                         <span class="feature">🎬 Video Conversion</span>
                         <span class="feature">⚡ Batch Processing</span>
-                        <span class="feature">✅ Validation System</span>
                     </div>
                     <div class="project-tech">
                         <span class="tech-tag">Python</span>
                         <span class="tech-tag">Tkinter</span>
                         <span class="tech-tag">PIL</span>
-                        <span class="tech-tag">OpenCV</span>
                         <span class="tech-tag">FFmpeg</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/koushal13/SilentCanoe-FileForge" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i> View Code
+                        <a href="https://github.com/koushal13/SilentCanoe-FileForge" target="_blank" class="project-link primary">
+                            <i class="fab fa-github"></i> Source Code
                         </a>
                         <a href="https://github.com/koushal13/SilentCanoe-FileForge/releases" target="_blank" class="project-link">
-                            <i class="fas fa-download"></i> Download
+                            <i class="fas fa-download"></i> Download Free
                         </a>
                     </div>
                     <div class="project-stats">
-                        <span><i class="fas fa-star"></i> Open Source</span>
-                        <span><i class="fas fa-code-branch"></i> Production Ready</span>
-                        <span><i class="fas fa-users"></i> Community Driven</span>
+                        <span><i class="fab fa-creative-commons"></i> 100% Free</span>
+                        <span><i class="fas fa-code-branch"></i> Open Source</span>
+                        <span><i class="fas fa-tools"></i> Hobby Project</span>
                     </div>
-                </div>
-
-                <!-- Coming Soon Projects -->
-                <div class="project-card coming-soon">
-                    <div class="project-header">
-                        <h3>Next Project</h3>
-                        <span class="project-badge coming-soon">Coming Soon</span>
-                    </div>
-                    <p class="project-description">
-                        Stay tuned for my next open-source contribution to the community. 
-                        Each project will focus on solving real-world problems with professional, 
-                        well-documented solutions.
-                    </p>
-                    <div class="project-preview">
-                        <i class="fas fa-rocket"></i>
-                        <p>Innovation in Progress</p>
-                    </div>
-                </div>
-
-                <div class="project-card coming-soon">
-                    <div class="project-header">
-                        <h3>Future Innovation</h3>
-                        <span class="project-badge coming-soon">In Planning</span>
-                    </div>
-                    <p class="project-description">
-                        Building the future of open-source tools, one project at a time. 
-                        Join the journey and be part of the community that shapes these solutions.
-                    </p>
-                    <div class="project-preview">
-                        <i class="fas fa-lightbulb"></i>
-                        <p>Ideas Brewing</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container">
-            <h2 class="section-title">Freelance Services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-desktop"></i>
-                    </div>
-                    <h3>Desktop Application Development</h3>
-                    <p>Custom Python desktop applications with professional GUIs, focusing on user experience and functionality.</p>
-                    <ul>
-                        <li>Tkinter & Modern GUI Frameworks</li>
-                        <li>Cross-platform Compatibility</li>
-                        <li>User-friendly Interfaces</li>
-                        <li>Performance Optimization</li>
-                    </ul>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-exchange-alt"></i>
-                    </div>
-                    <h3>File Processing Solutions</h3>
-                    <p>Robust file conversion and processing tools with batch capabilities and validation systems.</p>
-                    <ul>
-                        <li>Multi-format Support</li>
-                        <li>Batch Processing</li>
-                        <li>Quality Validation</li>
-                        <li>Progress Tracking</li>
-                    </ul>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fab fa-github"></i>
-                    </div>
-                    <h3>Open Source Development</h3>
-                    <p>Community-focused development with comprehensive documentation and professional standards.</p>
-                    <ul>
-                        <li>Open Source Best Practices</li>
-                        <li>Comprehensive Documentation</li>
-                        <li>Testing & Validation</li>
-                        <li>Community Support</li>
-                    </ul>
                 </div>
             </div>
         </div>
@@ -229,28 +181,33 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Let's Work Together</h2>
+            <h2 class="section-title">Find the Code</h2>
             <div class="contact-content">
                 <div class="contact-info">
-                    <h3>Ready to start your next project?</h3>
+                    <h3>Check out my projects</h3>
                     <p>
-                        Silent-Canoe is always excited to work on new challenges and contribute to the open-source community. 
-                        Whether you need a custom solution or want to collaborate on an open-source project, 
-                        let's connect!
+                        Hobby developer sharing open source tools. All projects are free to use and modify. 
+                        Feel free to browse the code and use whatever you find useful.
                     </p>
                     <div class="contact-methods">
-                        <a href="https://github.com/Silent-Canoe" target="_blank" class="contact-method">
+                        <a href="https://github.com/koushal13" target="_blank" class="contact-method primary">
                             <i class="fab fa-github"></i>
-                            <span>GitHub: @Silent-Canoe</span>
+                            <div>
+                                <span class="contact-title">GitHub</span>
+                                <span class="contact-desc">@koushal13 - Check out my open source projects</span>
+                            </div>
                         </a>
-                        <div class="contact-method">
-                            <i class="fas fa-envelope"></i>
-                            <span>Available for freelance work</span>
-                        </div>
-                        <div class="contact-method">
-                            <i class="fas fa-heart"></i>
-                            <span>Open to collaboration</span>
-                        </div>
+                        <a href="https://github.com/koushal13" target="_blank" class="contact-method">
+                            <i class="fas fa-code"></i>
+                            <div>
+                                <span class="contact-title">Projects</span>
+                                <span class="contact-desc">Browse my repositories and contributions</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="simple-note">
+                        <p><strong>Note:</strong> All projects are open source and free to use. Just a hobby developer sharing useful tools.</p>
                     </div>
                 </div>
             </div>
@@ -261,12 +218,23 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2025 Silent-Canoe. Building open-source solutions for the community.</p>
-                <div class="footer-links">
-                    <a href="https://github.com/Silent-Canoe" target="_blank">
-                        <i class="fab fa-github"></i>
-                    </a>
+                <div class="footer-main">
+                    <h3>Silent-Canoe</h3>
+                    <p>Learning. Building. Sharing.</p>
+                    <div class="footer-social">
+                        <a href="https://github.com/koushal13" target="_blank" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
                 </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Silent-Canoe. Open source projects shared freely.</p>
+                <p class="footer-license">
+                    <i class="fab fa-creative-commons"></i>
+                    <i class="fab fa-creative-commons-by"></i>
+                    All projects under open licenses
+                </p>
             </div>
         </div>
     </footer>
