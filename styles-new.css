@@ -51,13 +51,13 @@
 }
 
 html {
-    scroll-padding-top: 150px; /* Increased even more for fixed navbar */
+    scroll-padding-top: 200px; /* Much more generous padding for fixed navbar */
 }
 
 /* Specific sections that need extra top padding */
 #about, #projects, #contact {
-    padding-top: 10rem; /* Extra padding for sections accessed via navigation */
-    scroll-margin-top: 150px; /* Ensure proper scroll positioning */
+    padding-top: 15rem; /* Massive padding to ensure titles are visible */
+    scroll-margin-top: 200px; /* Very generous scroll margin */
 }
 
 body {
@@ -380,6 +380,7 @@ section {
     text-align: center;
     margin-bottom: 1rem;
     color: var(--text-primary);
+    padding-top: 2rem; /* Extra padding above section titles */
 }
 
 .section-subtitle {

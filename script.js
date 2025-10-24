@@ -20,12 +20,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         const targetId = this.getAttribute('href').substring(1);
         const target = document.getElementById(targetId);
         if (target) {
-            // Use a fixed offset that definitely works
-            const yOffset = -150; 
+            // Use a much larger offset to guarantee section titles are visible
+            const yOffset = -200; 
             const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
             
             window.scrollTo({
-                top: y,
+                top: Math.max(0, y), // Don't scroll above page top
                 behavior: 'smooth'
             });
         }
