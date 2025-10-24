@@ -51,7 +51,7 @@
 }
 
 html {
-    scroll-padding-top: 100px; /* Account for fixed navbar height + extra space */
+    scroll-padding-top: 140px; /* Increased padding for fixed navbar height + extra space */
 }
 
 body {

@@ -21,10 +21,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         if (target) {
             const navbar = document.querySelector('.navbar');
             const navbarHeight = navbar.offsetHeight;
-            const targetPosition = target.offsetTop - navbarHeight - 20; // Extra 20px padding
+            // Use a more generous offset to ensure section title is visible
+            const offset = Math.max(navbarHeight + 80, 140); // At least 140px or navbar + 80px
+            const targetPosition = target.offsetTop - offset;
             
             window.scrollTo({
-                top: targetPosition,
+                top: Math.max(0, targetPosition), // Don't scroll above page top
                 behavior: 'smooth'
             });
         }
