@@ -13,21 +13,30 @@ document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', 
     navMenu.classList.remove('active');
 }));
 
-// Smooth scrolling for navigation links - target the spacer element
+// Smooth scrolling for navigation links - very simple approach
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const targetId = this.getAttribute('href').substring(1);
-        const target = document.getElementById(targetId);
-        if (target) {
-            // Look for spacer div first, then fall back to section
-            const spacer = target.querySelector('.navbar-spacer');
-            const scrollTarget = spacer || target;
-            
-            scrollTarget.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
+        
+        if (targetId === 'about') {
+            // Special handling for About section - scroll to very top of section
+            const aboutSection = document.getElementById('about');
+            if (aboutSection) {
+                window.scrollTo({
+                    top: aboutSection.offsetTop - 100, // Simple 100px offset
+                    behavior: 'smooth'
+                });
+            }
+        } else {
+            // For other sections, use standard approach
+            const target = document.getElementById(targetId);
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
         }
     });
 });
