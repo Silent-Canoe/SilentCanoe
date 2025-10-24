@@ -13,20 +13,19 @@ document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', 
     navMenu.classList.remove('active');
 }));
 
-// Smooth scrolling for navigation links with navbar offset
+// Smooth scrolling for navigation links with proper offset
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        const targetId = this.getAttribute('href').substring(1);
+        const target = document.getElementById(targetId);
         if (target) {
-            const navbar = document.querySelector('.navbar');
-            const navbarHeight = navbar.offsetHeight;
-            // Use a more generous offset to ensure section title is visible
-            const offset = Math.max(navbarHeight + 80, 140); // At least 140px or navbar + 80px
-            const targetPosition = target.offsetTop - offset;
+            // Use a fixed offset that definitely works
+            const yOffset = -150; 
+            const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
             
             window.scrollTo({
-                top: Math.max(0, targetPosition), // Don't scroll above page top
+                top: y,
                 behavior: 'smooth'
             });
         }
